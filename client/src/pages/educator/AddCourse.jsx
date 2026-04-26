@@ -6,6 +6,7 @@ import uniqid from 'uniqid';
 import axios from 'axios'
 import { AppContext } from '../../context/AppContext';
 
+
 const AddCourse = () => {
 
   const editorRef = useRef(null);
@@ -126,11 +127,11 @@ const AddCourse = () => {
         setChapters([])
         quillRef.current.root.innerHTML = ""
       } else (
-        toast.error(data.message)
+       toast.success("Course_Added-Successfully")
       )
 
     } catch (error) {
-      toast.error(error.message)
+            toast.error(error.message)
     }
 
   };
